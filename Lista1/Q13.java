@@ -1,12 +1,11 @@
-/*package Lista1;
-
 import java.util.Scanner;
 
 public class Q13 {
     
-    cc
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void question(){
+
         System.out.print("N1 = ");
         float n1 = scanner.nextFloat();
         System.out.print("N2 = ");
@@ -18,8 +17,14 @@ public class Q13 {
 
         String status;
         if (med >= 7) status = "APROVADO";
-        else if (med<7 && med>=4)
+        else if (med<7 && med>=4){            
+            float rec = 14-med;
 
-        System.out.println("Status: "+status);
+            status = "RECUPERAÇÃO\nNota para ser aprovado: "+rec;
+        }
+        else status = "REPROVADO";
+
+        System.out.println("Media: "+med+"\nStatus: "+status);
+        
     }
-}*/
+}

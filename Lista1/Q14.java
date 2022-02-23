@@ -1,5 +1,3 @@
-/*package Lista1;
-
 import java.lang.Math;
 import java.util.Scanner;
 
@@ -16,25 +14,31 @@ public class Q14 {
         float c = scanner.nextFloat();
 
         float d = delta(a,b,c);
-        System.out.println(d);
+        System.out.println("delta: "+d);
 
-        raiz(a,b,d);
+        if (d<0) System.out.println("Não existe raizes");
+        else raiz(a,b,d);
 
     }
-    //b2*4ac
+    //b2-4ac
     public static float delta(float a, float b, float c){
-        float delta = (b*b)*4*a*c;
+        float delta = (b*b)-(4*a*c);
         return delta;
     }
     //-b +- R delta / 2a
     public static void raiz(float a, float b, float d){
-        float raiz = Math.sqrt(d);
+        double raiz = Math.sqrt(d);
+        System.out.println("raiz: "+raiz);
 
-        float x1 = b*(-1)+raiz;
-        x1 = x1/2*a;
-        float x2 = b*(-1)-raiz;
-        x2 = x2/2*a;
+        double x1 = -b*(-1)+raiz;
+        x1 = x1/(2*a);
+        System.out.print("x1 = " +x1);
 
-        System.out.println("x1 = " +x1+" e "+x2);
+        if (d!=0){
+        double x2 = -b*(-1)-raiz;
+        x2 = x2/(2*a);
+        System.out.print(" e "+x2);
+        }
+
     }
-}*/
+}

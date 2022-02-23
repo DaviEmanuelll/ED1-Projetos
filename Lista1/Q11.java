@@ -1,4 +1,4 @@
-package Lista1;
+
 
 public class Q11 {
 
