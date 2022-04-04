@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Q {
     
-    private static Scanner scanner = new Scanner(System.in);
+    //private static Scanner scanner = new Scanner(System.in);
 
     public static void question(){
         String path = "Lista1/Arquivos/arquivo_texto.csv"; 	// arquivo sera criado na pasta (temp) ja criada dentro do projeto.

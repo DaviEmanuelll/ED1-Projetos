@@ -1,11 +1,9 @@
-
-
 import java.util.Scanner;
 
 public class Conta {
-
-    private static Scanner scanner = new Scanner(System.in); 
     
+    private static Scanner scanner = new Scanner(System.in); 
+
     String nome;
     float saldo;
     
@@ -14,19 +12,40 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public void transferir(Conta c2){
+    public void transferirPara(Conta c2){
 
         System.out.println("Quanto deseja transferir para '"+c2.nome+"?");
         float valorTransferir = scanner.nextFloat();
 
-        if(valorTransferir<=this.saldo){
+        if(this.transferirSaldo(valorTransferir)){
+            c2.receberSaldo(valorTransferir);
+        }else System.out.println("SALDO INSUFIIENTE PARA REALIZAR TRANSFERENCIA.");
 
-            this.saldo=this.saldo-valorTransferir;
-            c2.saldo+=valorTransferir;
-            System.out.println("Transferencia de R$"+valorTransferir+" feita com SUCESSO!");
-
-        } else System.out.println("SALDO INSUFIIENTE PARA REALIZAR TRANSFERENCIA.");   
         
+    }
+
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void receberSaldo(float saldo) {
+        this.saldo = this.saldo + saldo;
+    }
+    public boolean transferirSaldo(float valorTransferir) {
+        boolean deuCerto;
+        if(valorTransferir<=getSaldo()){
+            this.saldo=this.saldo-valorTransferir;
+            deuCerto = true;
+        } else {
+            System.out.println("SALDO INSUFIIENTE PARA REALIZAR TRANSFERENCIA."); 
+            deuCerto=false;
+        }
+        return deuCerto;
+    }
+
+    @Override
+    public String toString() {
+        return "Conta [nome=" + nome + ", saldo=" + saldo + "]";
     }
     
 }
