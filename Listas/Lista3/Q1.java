@@ -3,6 +3,7 @@
 import java.util.Scanner;
 
 public class Q1 {
+    public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
         int[] vetor = new int[10];
         for(int i=0;i<vetor.length;i++){
@@ -10,7 +11,6 @@ public class Q1 {
             System.out.print(vetor[i]+" ");
         }
 
-        Scanner scanner = new Scanner(System.in);
         System.out.println("\nPesquisa: ");
         int num = scanner.nextInt();
         

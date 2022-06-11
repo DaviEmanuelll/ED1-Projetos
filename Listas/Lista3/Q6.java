@@ -16,7 +16,6 @@ public class Q6 {
         }
         System.out.println();
 
-        c
     }
 
     private static int[] CriarVetor(int tam) {

@@ -1,0 +1,12 @@
+Para todos os algoritmos, a seguir, utilize Generic.
+1. Implemente o algoritmo de busca linear. Utilize uma estrutura estática.
+2. Implemente o algoritmo de busca linear. Utilize uma estrutura dinâmica.
+3. Implemente o algoritmo de busca binária.
+4. Opcional. Implemente uma tabela hash. Use tratamento de colisão fechado (lista encadeada).
+5. Opcional. Implemente uma tabela hash . Use tratamento de colisão aberto (ocupa posições vazias na
+tabela).
+6. Implemente o algoritmo de ordenação bubble sort.
+7. Implemente o algoritmo de ordenação insert sort.
+8. Implemente o algoritmo de ordenação select sort.
+9. Implemente o algoritmo de ordenação shell sort.
+10. Implemente o algoritmo de ordenação quick sort.
